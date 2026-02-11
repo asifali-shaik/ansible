@@ -1,0 +1,15 @@
+- name: variables from diff paths
+  hosts: local
+  connection: local
+vars:
+  NAME: "Ansible from play"
+vars_prompt:
+  - name: "ansible from prompt"
+    prompt: "enter a name "
+    private: false
+tasks:
+  - name: name
+    vars:
+      name: "ansible from TASKS"
+      ansible.builtin.debug:
+        msg: "hii {{ name }}"
