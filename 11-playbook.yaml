@@ -9,8 +9,8 @@
       state:"{{item.state}}"
     loop:
     - name: mysql
-      state: "present"
+      state: present
 
     - name: nodejs
-      state: "absent"  
+      state: absent  
     
