@@ -1,15 +1,12 @@
-- name: variables from diff paths
+# data types in ansible
+
+- name: data types
   hosts: local
   connection: local
-vars:
-  NAME: "Ansible from play"
-vars_prompt:
-  - name: "ansible from prompt"
-    prompt: "enter a name "
-    private: false
-tasks:
-  - name: name
-    vars:
-      name: "ansible from TASKS"
-      ansible.builtin.debug:
-        msg: "hii {{ name }}"
+  vars:
+    PROGRAM: "devops with aws"
+    duration: 140
+    IS_LIVE: true
+    DETAILS:
+      months: 4
+      trainer: siva
